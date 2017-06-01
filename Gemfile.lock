@@ -1,0 +1,21 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    block-is-array (0.0.2)
+    chroma (0.1.0)
+    mini_portile2 (2.1.0)
+    nokogiri (1.7.2)
+      mini_portile2 (~> 2.1.0)
+    xml-dsl (0.0.5)
+      block-is-array (~> 0)
+      nokogiri (~> 1)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  chroma
+  xml-dsl
+
+BUNDLED WITH
+   1.15.0
