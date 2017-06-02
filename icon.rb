@@ -3,41 +3,32 @@
 require 'chroma'
 require 'xml-dsl'
 
-SCALE = 100
-
-brown = '#62432f'
-grey = '#807768'
-yellow = '#9f7d35'
-red = '#8c201d'
-
-def color(rgb)
-  rgb.paint.saturate.to_hex
+def brighten(rgb)
+  rgb.paint.brighten(20).saturate(40).to_hex
 end
 
-def scale(number)
-  (number * SCALE).round
-end
-
-def points(*points)
-  points.map do |x, y|
-    "#{scale x},#{scale y}"
-  end.join ' '
-end
+grey = '#807768'.paint.brighten(34).to_hex
+yellow = brighten '#9f7d35'
+red = brighten '#8c201d'
 
 svg = xml do
-  width = 6 * SCALE
-  height = 3 * SCALE
+  width = 240
+  height = 180
 
   svg xmlns: 'http://www.w3.org/2000/svg', width: width, height: height do
-    polygon points: points([1.5, 0], [2.3, 0], [3.8, 3], [3, 3]),
-            fill: color(brown)
-    polygon points: points([0, 1], [5, 1], [5.5, 2], [0.5, 2]),
-            fill: color(grey)
-    polygon points: points([0.5, 0], [1.3, 0], [2.8, 3], [2, 3]),
-            fill: color(yellow)
-    polygon points: points([2.5, 0], [3.5, 0], [5, 3], [4, 3], [3.5, 2],
-                           [3, 3], [2, 3], [3, 1]),
-            fill: color(red)
+    path d: 'M 55 170 h 30 l 75 -50 l 5 -40 Z', fill: grey
+    path d: 'M 100 180 h 40 l 10 -110 h -40 Z', fill: grey
+    path d: 'M 0 180 h 40 l 200 -130 h -40 Z', fill: grey
+
+    path(
+      d: 'M 55 170 h 30 l 35 -60 l -20 -40 l 30 -60 h -30 l -30 60 l 20 40 Z',
+      fill: yellow
+    )
+
+    path(
+      d: 'M 20 20 h 40 l 80 160 h -40 l -30 -60 l -30 60 h -40 l 50 -100 Z',
+      fill: red
+    )
   end
 end
 

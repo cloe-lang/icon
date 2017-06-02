@@ -1,6 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="600" height="300">
-    <polygon points="150,0 230,0 380,300 300,300" fill="#694128"/>
-    <polygon points="0,100 500,100 550,200 50,200" fill="#8c7a5c"/>
-    <polygon points="50,0 130,0 280,300 200,300" fill="#aa812a"/>
-    <polygon points="250,0 350,0 500,300 400,300 350,200 300,300 200,300 300,100" fill="#941815"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="240" height="180">
+    <path d="M 55 170 h 30 l 75 -50 l 5 -40 Z" fill="#d7cebf"/>
+    <path d="M 100 180 h 40 l 10 -110 h -40 Z" fill="#d7cebf"/>
+    <path d="M 0 180 h 40 l 200 -130 h -40 Z" fill="#d7cebf"/>
+    <path d="M 55 170 h 30 l 35 -60 l -20 -40 l 30 -60 h -30 l -30 60 l 20 40 Z" fill="#f9be41"/>
+    <path d="M 20 20 h 40 l 80 160 h -40 l -30 -60 l -30 60 h -40 l 50 -100 Z" fill="#ef2620"/>
 </svg>
