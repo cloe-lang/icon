@@ -21,7 +21,7 @@ svg = xml do
                      x1: '0%', y1: '100%',
                      x2: '0%', y2: '0%') do
         stop offset: '0%', 'stop-color' => grey
-        stop offset: '80%', 'stop-color' => 'white'
+        stop offset: '85%', 'stop-color' => 'white'
       end
 
       clipPath id: 'shadowPath' do
