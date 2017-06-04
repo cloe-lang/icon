@@ -6,7 +6,7 @@ end
 
 task :svgs do
   sh './icon.rb > icon.svg'
-  sh './icon.rb --landscape > landscape.svg'
+  sh './icon.rb --landscape --shadow > landscape.svg'
 end
 
 task default: :svgs do
