@@ -3,23 +3,17 @@
 require 'chroma'
 require 'xml-dsl'
 
-def brighten(rgb)
+grey = '#807768'.paint.brighten(34).to_hex
+red, yellow = %w[#8c201d #9f7d35].map do |rgb|
   rgb.paint.brighten(20).saturate(40).to_hex
 end
 
-grey = '#807768'.paint.brighten(34).to_hex
-yellow = brighten '#9f7d35'
-red = brighten '#8c201d'
-
-svg = xml do
-  width = 240
-  height = 170
-
-  svg xmlns: 'http://www.w3.org/2000/svg', width: width, height: height do
+puts(xml do
+  svg xmlns: 'http://www.w3.org/2000/svg', width: 240, height: 170 do
     defs do
-      linearGradient(id: 'shadowColor',
+      linearGradient id: 'shadowColor',
                      x1: '0%', y1: '100%',
-                     x2: '0%', y2: '0%') do
+                     x2: '0%', y2: '0%' do
         stop offset: '0%', 'stop-color' => grey
         stop offset: '85%', 'stop-color' => 'white'
       end
@@ -31,9 +25,9 @@ svg = xml do
       end
     end
 
-    rect(width: '100%', height: '100%',
+    rect width: '100%', height: '100%',
          fill: 'url(#shadowColor)',
-         'clip-path' => 'url(#shadowPath)')
+         'clip-path' => 'url(#shadowPath)'
 
     path(
       d: 'M 55 160 h 30 l 35 -60 l -20 -40 l 30 -60 h -30 l -30 60 l 20 40 Z',
@@ -45,6 +39,4 @@ svg = xml do
       fill: red
     )
   end
-end
-
-puts svg
+end)
