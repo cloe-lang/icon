@@ -1,7 +1,8 @@
 require 'rake'
 
 rule '.png' => '.svg' do |t|
-  sh "inkscape -d #{96 * 4} --export-area-drawing --export-png #{t.name} #{t.source}"
+  sh %W[inkscape -d #{96 * 4} --export-area-drawing --export-png
+        #{t.name} #{t.source}].join ' '
 end
 
 task :svgs do
