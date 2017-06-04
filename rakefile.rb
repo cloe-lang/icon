@@ -1,16 +1,10 @@
-require 'rake'
+dpi = 96 * 4
 
-rule '.png' => '.svg' do |t|
-  sh %W[inkscape -d #{96 * 4} --export-area-drawing --export-png
-        #{t.name} #{t.source}].join ' '
-end
-
-task :svgs do
+task :default do
   sh './icon.rb > icon.svg'
-  sh './icon.rb --landscape --shadow > landscape.svg'
-end
+  sh "inkscape -d #{dpi} --export-area-drawing --export-png icon.png icon.svg"
 
-task default: :svgs do
-  Rake::Task['icon.png'].invoke
-  Rake::Task['landscape.png'].invoke
+  sh './icon.rb --landscape --shadow > landscape.svg'
+  sh %W[inkscape -d #{dpi} --export-area -400:-40:540:210 --export-png
+        landscape.png landscape.svg].join ' '
 end
