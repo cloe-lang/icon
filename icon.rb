@@ -8,7 +8,7 @@ args = Docopt.docopt "
 Icon generator
 
 Usage:
-  #{__FILE__} [--shadow] [--landscape]
+  #{__FILE__} [--landscape] [--shadow]
 "
 
 grey = '#807768'.paint.brighten(34).to_hex
