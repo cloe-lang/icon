@@ -11,7 +11,6 @@ Usage:
   #{__FILE__} [--landscape] [--shadow]
 "
 
-grey = '#807768'.paint.brighten(34).to_hex
 red, yellow = %w[#8c201d #9f7d35].map do |rgb|
   rgb.paint.brighten(20).saturate(40).to_hex
 end
@@ -25,8 +24,12 @@ puts(xml do
         linearGradient id: 'shadowColor',
                        x1: '0%', y1: '100%',
                        x2: '0%', y2: '0%' do
-          stop offset: '0%', 'stop-color' => grey
-          stop offset: '85%', 'stop-color' => 'white'
+          stop offset: '0%',
+               'stop-color' => 'black',
+               'stop-opacity' => '50%'
+          stop offset: '85%',
+               'stop-color' => 'black',
+               'stop-opacity' => '0%'
         end
 
         clipPath id: 'shadowPath' do
