@@ -1,7 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="240" height="170">
     <defs>
         <linearGradient id="shadowColor" x1="0%" y1="100%" x2="0%" y2="0%">
-            <stop offset="0%" stop-color="black" stop-opacity="50%"/>
+            <stop offset="0%" stop-color="black" stop-opacity="30%"/>
             <stop offset="85%" stop-color="black" stop-opacity="0%"/>
         </linearGradient>
         <clipPath id="shadowPath">

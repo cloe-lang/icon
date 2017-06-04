@@ -26,7 +26,7 @@ puts(xml do
                        x2: '0%', y2: '0%' do
           stop offset: '0%',
                'stop-color' => 'black',
-               'stop-opacity' => '50%'
+               'stop-opacity' => '30%'
           stop offset: '85%',
                'stop-color' => 'black',
                'stop-opacity' => '0%'
