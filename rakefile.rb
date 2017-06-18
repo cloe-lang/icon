@@ -7,6 +7,6 @@ task :default do
         square.png icon.svg].join ' '
 
   sh './icon.rb --shadow > shadowed.svg'
-  sh %w[inkscape -d 96 --export-area -100:0:240:170 --export-png
+  sh %w[inkscape -d 96 --export-area -100:-20:240:190 --export-png
         shadowed.png shadowed.svg].join ' '
 end
