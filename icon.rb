@@ -8,7 +8,7 @@ args = Docopt.docopt "
 Icon generator
 
 Usage:
-  #{__FILE__} [--landscape] [--shadow]
+  #{__FILE__} [--shadow]
 "
 
 red, yellow = %w[#8c201d #9f7d35].map do |rgb|

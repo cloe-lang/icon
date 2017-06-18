@@ -6,7 +6,7 @@ task :default do
   sh %W[inkscape -d #{dpi} --export-area -15:0:155:170 --export-png
         square.png icon.svg].join ' '
 
-  sh './icon.rb --landscape --shadow > landscape.svg'
-  sh %W[inkscape -d #{dpi} --export-area -400:-40:540:210 --export-png
-        landscape.png landscape.svg].join ' '
+  sh './icon.rb --shadow > shadowed.svg'
+  sh %W[inkscape -d #{dpi} --export-area -100:0:240:170 --export-png
+        shadowed.png shadowed.svg].join ' '
 end
