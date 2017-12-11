@@ -9,6 +9,7 @@ puts(xml do
   svg xmlns: 'http://www.w3.org/2000/svg', width: 200, height: 320 do
     rect width: '100%', height: '100%', fill: 'white'
     polygon points: '0,0 200,0 0,320', fill: GREEN
-    polygon points: '75,320 200,120 200,320', fill: YELLOW
+    polygon points: '15,320 60,320 200,96 200,24', fill: YELLOW
+    polygon points: '75,320 200,120 200,320', fill: GREEN
   end
 end)
