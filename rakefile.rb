@@ -1,4 +1,4 @@
-dpi = 96 * 4
+dpi = 96
 
 task :default do
   sh './icon.rb > icon.svg'
