@@ -2,14 +2,14 @@
 
 require 'xml-dsl'
 
-GREEN = '#004225'.freeze
-YELLOW = '#F0C420'.freeze
+PRIMARY = 'teal'.freeze
+SECONDARY = 'tomato'.freeze
 
 puts(xml do
-  svg xmlns: 'http://www.w3.org/2000/svg', width: 200, height: 320 do
-    rect width: '100%', height: '100%', fill: 'white'
-    polygon points: '0,0 200,0 0,320', fill: GREEN
-    polygon points: '15,320 60,320 200,96 200,24', fill: YELLOW
-    polygon points: '75,320 200,120 200,320', fill: GREEN
+  svg xmlns: 'http://www.w3.org/2000/svg', width: 160, height: 160 do
+    path d: 'M 0 0 h 160 l -30 30 h -100 v 100 h 100 l 30 30 h -160',
+         fill: PRIMARY
+    rect x: 30, y: 30, width: 100, height: 100, fill: SECONDARY
+    rect x: 60, y: 60, width: 40, height: 40, fill: PRIMARY
   end
 end)
