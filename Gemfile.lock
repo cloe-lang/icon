@@ -2,11 +2,11 @@ GEM
   remote: https://rubygems.org/
   specs:
     block-is-array (0.0.2)
-    chroma (0.1.0)
-    docopt (0.6.0)
-    mini_portile2 (2.1.0)
-    nokogiri (1.7.2)
-      mini_portile2 (~> 2.1.0)
+    chroma (0.2.0)
+    docopt (0.6.1)
+    mini_portile2 (2.3.0)
+    nokogiri (1.8.2)
+      mini_portile2 (~> 2.3.0)
     xml-dsl (0.0.5)
       block-is-array (~> 0)
       nokogiri (~> 1)
@@ -20,4 +20,4 @@ DEPENDENCIES
   xml-dsl
 
 BUNDLED WITH
-   1.15.1
+   1.16.1
