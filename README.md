@@ -2,7 +2,7 @@
 
 ![icon](spaced.png)
 
-The icon of Coel programming language.
+The icon of Cloe programming language.
 
 ## License
 
